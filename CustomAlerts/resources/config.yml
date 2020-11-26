@@ -18,11 +18,13 @@ FullServer:
   message: "&e{PLAYER}&b, The Server is full &c[{TOTALPLAYERS}/{MAXPLAYERS}]&b!\n&l&dTry to join later :)"
 FirstJoin:
   enable: true
-  message: "&2[{TIME}] &a{PLAYER}&d joined the game for the first time."
+  message: "&b&lFactions
+	Store: hysismc.tebex.io
+	Discord: discord.gg/hysis"
 Join:
   hide: false
   custom: true
-  message: "&2[{TIME}] &a{PLAYER}&e joined the game."
+  message: "&l&bWelcome &r<"
 Quit:
   hide: true
   custom: false
