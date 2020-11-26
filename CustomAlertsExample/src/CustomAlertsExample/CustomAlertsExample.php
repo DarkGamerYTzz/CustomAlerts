@@ -17,6 +17,16 @@ use CustomAlerts\Events\CustomAlertsJoinEvent;
 
 class CustomAlertsExample extends PluginBase implements Listener {
     
+    public $rank;
+    public function onEnable()
+    {
+        $this->rank = $this->getServer()->getPluginManager()->getPlugin("PurePerms");
+        if($this->rank === null){
+            $this->getLogger()->critical("PurePerms plugin not found!");
+            $this->setEnabled(false);
+            return;
+        }
+
     public function onEnable(){
     	if(CustomAlerts::getAPI()->getAPIVersion() == "2.0"){ //Checking API version. Important for API Functions Calls
     		$this->getLogger()->info(TextFormat::GREEN . "Example Plugin using CustomAlerts (API v2.0)");
